@@ -1,0 +1,68 @@
+/* 分组选择器： 公用同一套样式 符号是一个逗号隔开
+body{width: 100%;height: 100%;}
+html{width: 100%;height: 100%;}
+.swiper-container{width: 100%;height: 100%;}
+*/
+body,html,.swiper-container,.main{width: 100%;height:100%;overflow: hidden}
+html{font-size: 100px;}
+
+/*把所有运动元素隐藏起来 opacity：0*/
+.page1 .text01,.page1 .text02,.page2 .text1,.page2 .text2,.page3 .circle,.page3 .text{opacity:0}
+
+/*箭头*/
+.arrow{z-index:99;position:absolute;bottom:.2rem;left:50%;margin-left:-1.1rem;width:2.17rem;height:.74rem;background:url("../images/page3/dong.png") no-repeat;background-size: cover;-webkit-animation: fadeInUp 1s .2s infinite ease both;
+    animation: fadeInUp 1s .2s infinite ease both;}
+/*音乐*/
+.music{z-index:100;position:absolute;top:.2rem;left:.2rem;width:.6rem;height:.6rem;background: url("../audio/music.svg") no-repeat;background-size:100% 100%}
+.music audio {
+    display: none;
+}
+/*音乐动画*/
+.music {
+    -webkit-animation: musicMove 1s linear 0s infinite both;
+    animation: musicMove 1s linear 0s infinite both;
+}
+@-webkit-keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* 第一屏*/
+.page1{background:url("../images/page1/beijing.jpg") no-repeat;background-size: 100% 100%;}
+.page1 .text01{position:absolute;background: url("../images/page1/dengpao.png")no-repeat;width: 3.93rem;height: 6.31rem;background-size: cover;left: 50%;margin-left: -2rem}
+.page1 .text02{position:absolute;background: url("../images/page1/zi.png")no-repeat;width:3.35rem;height:2.8rem;background-size: cover;left: 50%;margin-left:-1.4rem;bottom: 2rem}
+/* 第一屏元素动画*/
+#page1 .text01{-webkit-animation: bounceInDown 1s ease 1s both;animation: bounceInDown 1s ease .2s both;}
+#page1 .text02{-webkit-animation: flipInY 1s ease 1.1s both;animation: flipInY 1s ease 1.1s both;}
+/* 第二屏*/
+.page2{background:url("../images/page2/bei.jpg") no-repeat;background-size: 100% 100%;}
+.page2 .text1{position:absolute;background: url("../images/page2/daohang2.png")no-repeat;width: 3.67rem;height: 4.58rem;background-size: cover;left: 50%;margin-left: -1.8rem}
+.page2 .text2{position:absolute;background: url("../images/page2/erzi.png")no-repeat;width:6.4rem;height:9.39rem;background-size: cover;left: 50%;margin-left: -3.2rem;top:1.7rem;}
+/* 第二屏元素动画*/
+#page2 .text1{-webkit-animation: bounceInDown 1s ease .8s both;animation: bounceInDown 1s ease .8s both;}
+#page2 .text2{-webkit-animation: fadeIn 1s ease 2.3s both;animation: fadeIn 1s ease 2.3s both;  }
+
+/* 第三屏*/
+.page3{background:url("../images/page2/bei.jpg") no-repeat;background-size: 100% 100%;}
+.page3 .circle{position:absolute;background: url("../images/page3/gongzuo.png")no-repeat;width:3.95rem;height:4.66rem;background-size: cover;left: 50%;margin-left: -2rem}
+.page3 .text{position:absolute;background: url("../images/page3/dao.png")no-repeat;width:6.4rem;height:9.63rem;background-size: cover;left: 50%;margin-left: -3.2rem;top:1.35rem}
+
+
+/* 第三屏元素动画*/
+#page3 .circle{-webkit-animation: bounceInDown 0.9s ease 1s both;animation: bounceInDown 1s ease 0.9s both;}
+#page3 .text{-webkit-animation: fadeIn 1s ease 2.5s both;animation: fadeIn 1s ease 2.5s both;}
